@@ -342,3 +342,23 @@ footer {
   background-color: #00b4d8;
   transform: translateY(-3px);
 }
+
+.question.correct {
+  background-color: #e7ffe7;
+  border-left: 4px solid #2ecc71;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.question.incorrect {
+  background-color: #ffe7e7;
+  border-left: 4px solid #e74c3c;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.feedback {
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
