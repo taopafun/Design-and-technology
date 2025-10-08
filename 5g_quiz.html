@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบ 5G</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>บทเรียนวิชาการออกแบบเทคโนโลยี</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="5g.html">เครือข่ายไร้สายยุคที่ 5</a></li>
+        <li><a href="ev.html">รถยนต์ไฟฟ้า</a></li>
+        <li><a href="logistics.html">การจัดการโลจิสติกส์</a></li>
+        <li><a href="product_dev.html">พัฒนาผลิตภัณฑ์ด้วยเทคโนโลยี</a></li>
+        <li><a href="ip.html">ทรัพย์สินทางปัญญาและนวัตกรรม</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>แบบทดสอบเกี่ยวกับเครือข่ายไร้สายยุคที่ 5 (5G)</h2>
+
+    <p>ทดสอบความรู้ของคุณเกี่ยวกับ 5G ด้วยแบบทดสอบก่อนเรียนและหลังเรียนต่อไปนี้ เลือกคำตอบที่ถูกต้องที่สุดสำหรับแต่ละคำถามแล้วคลิกปุ่มส่งคำตอบเพื่อดูคะแนนของคุณ</p>
+
+    <!-- Pre-test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบก่อนเรียน</h3>
+      <form id="preQuiz">
+        <div class="question">
+          <p>1. ข้อใดคือเครือข่ายที่เริ่มให้บริการส่งข้อความ SMS?</p>
+          <label><input type="radio" name="q1" value="1G"> 1G</label>
+          <label><input type="radio" name="q1" value="2G"> 2G</label>
+          <label><input type="radio" name="q1" value="3G"> 3G</label>
+          <label><input type="radio" name="q1" value="4G"> 4G</label>
+        </div>
+        <div class="question">
+          <p>2. ข้อใดเป็นคุณสมบัติหลักของ 5G?</p>
+          <label><input type="radio" name="q2" value="high-latency"> ความหน่วงสูง</label>
+          <label><input type="radio" name="q2" value="slower"> ช้ากว่า 4G</label>
+          <label><input type="radio" name="q2" value="few-devices"> รองรับอุปกรณ์จำนวนน้อย</label>
+          <label><input type="radio" name="q2" value="speed-low-latency"> ความเร็วสูงและความหน่วงต่ำ</label>
+        </div>
+        <div class="question">
+          <p>3. เครือข่าย 5G สามารถรองรับอุปกรณ์ได้ถึงกี่เครื่องต่อหนึ่งตารางกิโลเมตร?</p>
+          <label><input type="radio" name="q3" value="1k"> 1,000</label>
+          <label><input type="radio" name="q3" value="10k"> 10,000</label>
+          <label><input type="radio" name="q3" value="1M"> 1&nbsp;ล้าน</label>
+          <label><input type="radio" name="q3" value="10M"> 10&nbsp;ล้าน</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('preQuiz', ['2G','speed-low-latency','1M'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+
+    <!-- Post-test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบหลังเรียน</h3>
+      <form id="postQuiz">
+        <div class="question">
+          <p>1. 5G มีประโยชน์ต่อภาคใดบ้าง?</p>
+          <label><input type="radio" name="q1" value="finance"> การเงิน</label>
+          <label><input type="radio" name="q1" value="industry"> อุตสาหกรรมและการผลิต</label>
+          <label><input type="radio" name="q1" value="agriculture"> การเกษตร</label>
+          <label><input type="radio" name="q1" value="all-sectors"> ทั้งหมดที่กล่าวมา</label>
+        </div>
+        <div class="question">
+          <p>2. คุณสมบัติใดช่วยให้แพทย์ผ่าตัดจากระยะไกลผ่านเครือข่าย 5G ได้?</p>
+          <label><input type="radio" name="q2" value="high-speed"> ความเร็วสูง</label>
+          <label><input type="radio" name="q2" value="low-latency"> ความหน่วงต่ำ</label>
+          <label><input type="radio" name="q2" value="few-devices"> รองรับอุปกรณ์น้อย</label>
+          <label><input type="radio" name="q2" value="high-energy"> บริโภคพลังงานสูง</label>
+        </div>
+        <div class="question">
+          <p>3. ความเร็วในการรับส่งข้อมูลของ 5G สูงสุดประมาณเท่าใด?</p>
+          <label><input type="radio" name="q3" value="20Kbps"> 20&nbsp;กิโลบิตต่อวินาที</label>
+          <label><input type="radio" name="q3" value="20Mbps"> 20&nbsp;เมกะบิตต่อวินาที</label>
+          <label><input type="radio" name="q3" value="20Gbps"> 20&nbsp;กิกะบิตต่อวินาที</label>
+          <label><input type="radio" name="q3" value="200Gbps"> 200&nbsp;กิกะบิตต่อวินาที</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('postQuiz', ['all-sectors','low-latency','20Gbps'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal" class="modal">
+      <h4>ผลการทดสอบ</h4>
+      <p></p>
+      <button onclick="hideModal()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบ 5G</p>
+  </footer>
+</body>
+</html>

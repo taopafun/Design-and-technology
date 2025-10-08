@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบทรัพย์สินทางปัญญา</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>บทเรียนวิชาการออกแบบเทคโนโลยี</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="5g.html">เครือข่ายไร้สายยุคที่ 5</a></li>
+        <li><a href="ev.html">รถยนต์ไฟฟ้า</a></li>
+        <li><a href="logistics.html">การจัดการโลจิสติกส์</a></li>
+        <li><a href="product_dev.html">พัฒนาผลิตภัณฑ์ด้วยเทคโนโลยี</a></li>
+        <li><a href="ip.html">ทรัพย์สินทางปัญญาและนวัตกรรม</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>แบบทดสอบเกี่ยวกับทรัพย์สินทางปัญญา</h2>
+    <p>ตอบคำถามต่อไปนี้เพื่อวัดความเข้าใจของคุณเกี่ยวกับทรัพย์สินทางปัญญา ประกอบด้วยแบบทดสอบก่อนเรียนและหลังเรียน</p>
+
+    <!-- Pre‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบก่อนเรียน</h3>
+      <form id="preQuiz">
+        <div class="question">
+          <p>1. ทรัพย์สินทางปัญญาแบ่งออกเป็นกี่ประเภทหลัก?</p>
+          <label><input type="radio" name="q1" value="1"> 1 ประเภท</label>
+          <label><input type="radio" name="q1" value="2"> 2 ประเภท</label>
+          <label><input type="radio" name="q1" value="3"> 3 ประเภท</label>
+          <label><input type="radio" name="q1" value="many"> หลายประเภท</label>
+        </div>
+        <div class="question">
+          <p>2. ข้อใดเป็นตัวอย่างของเครื่องหมายการค้า?</p>
+          <label><input type="radio" name="q2" value="patent"> สิทธิบัตรการประดิษฐ์</label>
+          <label><input type="radio" name="q2" value="logo"> โลโก้ของสินค้าและบริการ</label>
+          <label><input type="radio" name="q2" value="gi"> สิ่งบ่งชี้ทางภูมิศาสตร์</label>
+          <label><input type="radio" name="q2" value="trade-secret"> ความลับทางการค้า</label>
+        </div>
+        <div class="question">
+          <p>3. สิ่งบ่งชี้ทางภูมิศาสตร์มีวัตถุประสงค์อย่างไร?</p>
+          <label><input type="radio" name="q3" value="origin"> ระบุแหล่งที่มาของผลิตภัณฑ์และคุณลักษณะเฉพาะที่เกิดจากภูมิประเทศ</label>
+          <label><input type="radio" name="q3" value="decoration"> เป็นเพียงเครื่องตกแต่งบรรจุภัณฑ์</label>
+          <label><input type="radio" name="q3" value="patent"> ใช้แทนการขอสิทธิบัตร</label>
+          <label><input type="radio" name="q3" value="no-purpose"> ไม่มีวัตถุประสงค์</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('preQuiz', ['2','logo','origin'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+
+    <!-- Post‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบหลังเรียน</h3>
+      <form id="postQuiz">
+        <div class="question">
+          <p>1. ข้อใดต่อไปนี้ไม่ใช่ประเภทของสิทธิบัตร?</p>
+          <label><input type="radio" name="q1" value="utility"> สิทธิบัตรการประดิษฐ์</label>
+          <label><input type="radio" name="q1" value="design"> สิทธิบัตรการออกแบบ</label>
+          <label><input type="radio" name="q1" value="plant"> สิทธิบัตรพืช</label>
+          <label><input type="radio" name="q1" value="copyright"> ลิขสิทธิ์</label>
+        </div>
+        <div class="question">
+          <p>2. เพื่อให้ความลับทางการค้าได้รับการคุ้มครอง เจ้าของควรทำสิ่งใด?</p>
+          <label><input type="radio" name="q2" value="share"> เผยแพร่ข้อมูลให้สาธารณชนทราบ</label>
+          <label><input type="radio" name="q2" value="ignore"> ไม่ต้องทำอะไร</label>
+          <label><input type="radio" name="q2" value="protect"> รักษาความลับและใช้มาตรการป้องกัน เช่น NDA</label>
+          <label><input type="radio" name="q2" value="register"> จดทะเบียนกับรัฐ</label>
+        </div>
+        <div class="question">
+          <p>3. ความตกลง TRIPS เกี่ยวข้องกับอะไร?</p>
+          <label><input type="radio" name="q3" value="travel"> กฎระเบียบด้านการท่องเที่ยว</label>
+          <label><input type="radio" name="q3" value="food"> มาตรฐานอาหาร</label>
+          <label><input type="radio" name="q3" value="ip"> มาตรฐานการคุ้มครองทรัพย์สินทางปัญญาระหว่างประเทศ</label>
+          <label><input type="radio" name="q3" value="sports"> กฎของการแข่งขันกีฬา</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('postQuiz', ['copyright','protect','ip'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Modal for quiz results -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal" class="modal">
+      <h4>ผลการทดสอบ</h4>
+      <p></p>
+      <button onclick="hideModal()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบทรัพย์สินทางปัญญา</p>
+  </footer>
+</body>
+</html>

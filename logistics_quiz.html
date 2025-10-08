@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบการจัดการโลจิสติกส์</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>บทเรียนวิชาการออกแบบเทคโนโลยี</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="5g.html">เครือข่ายไร้สายยุคที่ 5</a></li>
+        <li><a href="ev.html">รถยนต์ไฟฟ้า</a></li>
+        <li><a href="logistics.html">การจัดการโลจิสติกส์</a></li>
+        <li><a href="product_dev.html">พัฒนาผลิตภัณฑ์ด้วยเทคโนโลยี</a></li>
+        <li><a href="ip.html">ทรัพย์สินทางปัญญาและนวัตกรรม</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>แบบทดสอบเกี่ยวกับการจัดการโลจิสติกส์</h2>
+    <p>ทดสอบความรู้ของคุณเกี่ยวกับโลจิสติกส์ทั้งก่อนและหลังเรียน เลือกคำตอบที่ถูกต้องที่สุดและคลิกปุ่มส่งคำตอบเพื่อดูคะแนนของคุณ</p>
+
+    <!-- Pre‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบก่อนเรียน</h3>
+      <form id="preQuiz">
+        <div class="question">
+          <p>1. โลจิสติกส์เกี่ยวข้องกับกิจกรรมใดเป็นหลัก?</p>
+          <label><input type="radio" name="q1" value="marketing"> การตลาดและการโฆษณา</label>
+          <label><input type="radio" name="q1" value="movement"> การเคลื่อนย้ายสินค้าและข้อมูลจากต้นทางไปยังปลายทาง</label>
+          <label><input type="radio" name="q1" value="human-resource"> การจัดการบุคลากร</label>
+          <label><input type="radio" name="q1" value="finance"> การเงินและบัญชี</label>
+        </div>
+        <div class="question">
+          <p>2. ระบบใดใช้จัดเก็บและควบคุมปริมาณสินค้าในคลัง?</p>
+          <label><input type="radio" name="q2" value="ERP"> ระบบ ERP</label>
+          <label><input type="radio" name="q2" value="CRM"> ระบบ CRM</label>
+          <label><input type="radio" name="q2" value="WMS"> ระบบบริหารคลังสินค้า (WMS)</label>
+          <label><input type="radio" name="q2" value="POS"> ระบบ POS</label>
+        </div>
+        <div class="question">
+          <p>3. แนวคิดใดเน้นลดความสูญเปล่าและปรับปรุงอย่างต่อเนื่องในโลจิสติกส์?</p>
+          <label><input type="radio" name="q3" value="random"> Random Logistics</label>
+          <label><input type="radio" name="q3" value="lean"> Lean Logistics</label>
+          <label><input type="radio" name="q3" value="slow"> Slow Logistics</label>
+          <label><input type="radio" name="q3" value="idle"> Idle Logistics</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('preQuiz', ['movement','WMS','lean'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+
+    <!-- Post‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบหลังเรียน</h3>
+      <form id="postQuiz">
+        <div class="question">
+          <p>1. โหมดการขนส่งใดมีความเร็วสูงสุดแต่ต้นทุนสูงกว่ามาก?</p>
+          <label><input type="radio" name="q1" value="sea"> การขนส่งทางทะเล</label>
+          <label><input type="radio" name="q1" value="road"> การขนส่งทางรถบรรทุก</label>
+          <label><input type="radio" name="q1" value="air"> การขนส่งทางอากาศ</label>
+          <label><input type="radio" name="q1" value="rail"> การขนส่งทางรถไฟ</label>
+        </div>
+        <div class="question">
+          <p>2. เทคโนโลยีใดใช้ในการระบุตำแหน่งและติดตามสินค้าผ่านคลื่นวิทยุ?</p>
+          <label><input type="radio" name="q2" value="barcode"> บาร์โค้ด</label>
+          <label><input type="radio" name="q2" value="rfid"> RFID</label>
+          <label><input type="radio" name="q2" value="gps"> GPS</label>
+          <label><input type="radio" name="q2" value="wifi"> Wi‑Fi</label>
+        </div>
+        <div class="question">
+          <p>3. โลจิสติกส์สีเขียวมีเป้าหมายหลักคืออะไร?</p>
+          <label><input type="radio" name="q3" value="reduce-cost"> ลดต้นทุนและเพิ่มกำไรเท่านั้น</label>
+          <label><input type="radio" name="q3" value="increase-stock"> เพิ่มปริมาณสินค้าคงคลัง</label>
+          <label><input type="radio" name="q3" value="environment"> ลดผลกระทบต่อสิ่งแวดล้อมและใช้ทรัพยากรอย่างยั่งยืน</label>
+          <label><input type="radio" name="q3" value="delay"> เพิ่มเวลาการขนส่ง</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('postQuiz', ['air','rfid','environment'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Modal for quiz results -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal" class="modal">
+      <h4>ผลการทดสอบ</h4>
+      <p></p>
+      <button onclick="hideModal()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบการจัดการโลจิสติกส์</p>
+  </footer>
+</body>
+</html>

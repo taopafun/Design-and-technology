@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบรถยนต์ไฟฟ้า</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>บทเรียนวิชาการออกแบบเทคโนโลยี</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="5g.html">เครือข่ายไร้สายยุคที่ 5</a></li>
+        <li><a href="ev.html">รถยนต์ไฟฟ้า</a></li>
+        <li><a href="logistics.html">การจัดการโลจิสติกส์</a></li>
+        <li><a href="product_dev.html">พัฒนาผลิตภัณฑ์ด้วยเทคโนโลยี</a></li>
+        <li><a href="ip.html">ทรัพย์สินทางปัญญาและนวัตกรรม</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>แบบทดสอบเกี่ยวกับรถยนต์ไฟฟ้า</h2>
+    <p>ทดสอบความรู้ของคุณเกี่ยวกับรถยนต์ไฟฟ้าด้วยแบบทดสอบก่อนเรียนและหลังเรียนต่อไปนี้ เลือกคำตอบที่ถูกต้องที่สุดสำหรับแต่ละคำถามแล้วคลิกปุ่มส่งคำตอบเพื่อดูคะแนนของคุณ</p>
+
+    <!-- Pre‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบก่อนเรียน</h3>
+      <form id="preQuiz">
+        <div class="question">
+          <p>1. รถยนต์ไฟฟ้าประเภทใดไม่มีเครื่องยนต์สันดาปภายใน?</p>
+          <label><input type="radio" name="q1" value="BEV"> รถยนต์ไฟฟ้าแบตเตอรี่ (BEV)</label>
+          <label><input type="radio" name="q1" value="PHEV"> รถยนต์ไฟฟ้าแบบปลั๊กอินไฮบริด (PHEV)</label>
+          <label><input type="radio" name="q1" value="HEV"> รถยนต์ไฮบริด (HEV)</label>
+          <label><input type="radio" name="q1" value="FCEV"> รถยนต์เซลล์เชื้อเพลิง (FCEV)</label>
+        </div>
+        <div class="question">
+          <p>2. ส่วนประกอบใดทำหน้าที่แปลงพลังงานไฟฟ้าเป็นพลังงานกลเพื่อขับเคลื่อนรถ?</p>
+          <label><input type="radio" name="q2" value="battery"> แบตเตอรี่</label>
+          <label><input type="radio" name="q2" value="motor"> มอเตอร์ไฟฟ้า</label>
+          <label><input type="radio" name="q2" value="inverter"> อินเวอร์เตอร์</label>
+          <label><input type="radio" name="q2" value="charger"> เครื่องชาร์จ</label>
+        </div>
+        <div class="question">
+          <p>3. เทคโนโลยีการเบรกแบบใดที่ช่วยชาร์จพลังงานกลับเข้าสู่แบตเตอรี่?</p>
+          <label><input type="radio" name="q3" value="disc"> ดิสก์เบรก</label>
+          <label><input type="radio" name="q3" value="drum"> ดรัมเบรก</label>
+          <label><input type="radio" name="q3" value="regen"> ระบบเบรกแบบชาร์จพลังงานกลับ (Regenerative Braking)</label>
+          <label><input type="radio" name="q3" value="abs"> ระบบเบรกกันล้อล็อก (ABS)</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('preQuiz', ['BEV','motor','regen'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+
+    <!-- Post‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบหลังเรียน</h3>
+      <form id="postQuiz">
+        <div class="question">
+          <p>1. แบตเตอรี่ประเภทใดที่มักใช้ในรถยนต์ไฟฟ้าสมัยใหม่?</p>
+          <label><input type="radio" name="q1" value="lead-acid"> ตะกั่ว‑กรด (Lead‑acid)</label>
+          <label><input type="radio" name="q1" value="nickel-metal"> นิเกิล‑เมทัลไฮไดรด์</label>
+          <label><input type="radio" name="q1" value="lithium"> ลิเธียม‑ไอออน</label>
+          <label><input type="radio" name="q1" value="zinc-air"> สังกะสี‑อากาศ</label>
+        </div>
+        <div class="question">
+          <p>2. ข้อใดคือประโยชน์หลักของรถยนต์ไฟฟ้า?</p>
+          <label><input type="radio" name="q2" value="pollution"> ลดมลพิษทางอากาศและก๊าซเรือนกระจก</label>
+          <label><input type="radio" name="q2" value="noise"> สร้างเสียงดัง</label>
+          <label><input type="radio" name="q2" value="fuel-consumption"> บริโภคน้ำมันมากขึ้น</label>
+          <label><input type="radio" name="q2" value="complex"> มีระบบซับซ้อนจนต้องบำรุงรักษามาก</label>
+        </div>
+        <div class="question">
+          <p>3. แนวคิด Vehicle‑to‑Grid (V2G) ช่วยให้รถยนต์ไฟฟ้าทำอะไรได้?</p>
+          <label><input type="radio" name="q3" value="charge-only"> ชาร์จไฟจากบ้านเท่านั้น</label>
+          <label><input type="radio" name="q3" value="drive"> วิ่งได้ไกลขึ้น</label>
+          <label><input type="radio" name="q3" value="sell"> จ่ายไฟกลับเข้าสู่โครงข่ายไฟฟ้าเพื่อช่วยเสริมความเสถียร</label>
+          <label><input type="radio" name="q3" value="play-music"> เล่นเพลงได้ดังขึ้น</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('postQuiz', ['lithium','pollution','sell'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Modal for quiz results -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal" class="modal">
+      <h4>ผลการทดสอบ</h4>
+      <p></p>
+      <button onclick="hideModal()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบรถยนต์ไฟฟ้า</p>
+  </footer>
+</body>
+</html>

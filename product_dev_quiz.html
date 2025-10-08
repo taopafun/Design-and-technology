@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบการพัฒนาผลิตภัณฑ์</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>บทเรียนวิชาการออกแบบเทคโนโลยี</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="5g.html">เครือข่ายไร้สายยุคที่ 5</a></li>
+        <li><a href="ev.html">รถยนต์ไฟฟ้า</a></li>
+        <li><a href="logistics.html">การจัดการโลจิสติกส์</a></li>
+        <li><a href="product_dev.html">พัฒนาผลิตภัณฑ์ด้วยเทคโนโลยี</a></li>
+        <li><a href="ip.html">ทรัพย์สินทางปัญญาและนวัตกรรม</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>แบบทดสอบเกี่ยวกับการพัฒนาผลิตภัณฑ์</h2>
+    <p>ตอบคำถามก่อนเรียนและหลังเรียนเพื่อทบทวนความเข้าใจเกี่ยวกับกระบวนการออกแบบและพัฒนาผลิตภัณฑ์</p>
+
+    <!-- Pre‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบก่อนเรียน</h3>
+      <form id="preQuiz">
+        <div class="question">
+          <p>1. ขั้นตอนแรกในกระบวนการออกแบบเชิงวิศวกรรมคืออะไร?</p>
+          <label><input type="radio" name="q1" value="identify"> ระบุปัญหา</label>
+          <label><input type="radio" name="q1" value="collect"> รวบรวมข้อมูล</label>
+          <label><input type="radio" name="q1" value="design"> ออกแบบวิธีแก้ปัญหา</label>
+          <label><input type="radio" name="q1" value="present"> นำเสนอ</label>
+        </div>
+        <div class="question">
+          <p>2. เทคโนโลยีใดช่วยให้สามารถสร้างต้นแบบสามมิติได้รวดเร็วและมีต้นทุนต่ำ?</p>
+          <label><input type="radio" name="q2" value="cad"> ซอฟต์แวร์ CAD</label>
+          <label><input type="radio" name="q2" value="3d-print"> การพิมพ์สามมิติ (3D Printing)</label>
+          <label><input type="radio" name="q2" value="cnc"> เครื่องจักร CNC</label>
+          <label><input type="radio" name="q2" value="casting"> การหล่อโลหะ</label>
+        </div>
+        <div class="question">
+          <p>3. แนวคิด Design Thinking ประกอบด้วยขั้นตอนใดที่ไม่ใช่ส่วนหนึ่งของกระบวนการ?</p>
+          <label><input type="radio" name="q3" value="empathize"> Empathize</label>
+          <label><input type="radio" name="q3" value="define"> Define</label>
+          <label><input type="radio" name="q3" value="build"> Build</label>
+          <label><input type="radio" name="q3" value="test"> Test</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('preQuiz', ['identify','3d-print','build'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+
+    <!-- Post‑test -->
+    <section class="quiz-section">
+      <h3>แบบทดสอบหลังเรียน</h3>
+      <form id="postQuiz">
+        <div class="question">
+          <p>1. ในการเลือกแนวคิดเพื่อนำไปพัฒนาต่อ ควรใช้เกณฑ์ใดบ้าง?</p>
+          <label><input type="radio" name="q1" value="random"> เลือกแบบสุ่มโดยไม่พิจารณาอะไร</label>
+          <label><input type="radio" name="q1" value="feasibility"> ความเป็นไปได้ทางเทคนิคและความคุ้มค่าทางเศรษฐกิจ</label>
+          <label><input type="radio" name="q1" value="popularity"> ความนิยมในสังคมออนไลน์เท่านั้น</label>
+          <label><input type="radio" name="q1" value="seniority"> ความเห็นของคนที่อาวุโสที่สุด</label>
+        </div>
+        <div class="question">
+          <p>2. การทดสอบเบต้า (Beta Test) คืออะไร?</p>
+          <label><input type="radio" name="q2" value="internal"> การทดสอบภายในทีมพัฒนาเท่านั้น</label>
+          <label><input type="radio" name="q2" value="public"> การเปิดตัวผลิตภัณฑ์อย่างเป็นทางการ</label>
+          <label><input type="radio" name="q2" value="limited-users"> การทดสอบกับกลุ่มผู้ใช้จริงในวงจำกัดเพื่อรับข้อเสนอแนะ</label>
+          <label><input type="radio" name="q2" value="no-test"> ไม่ต้องทดสอบ</label>
+        </div>
+        <div class="question">
+          <p>3. การออกแบบเพื่อความยั่งยืน (Design for Sustainability) มีเป้าหมายอย่างไร?</p>
+          <label><input type="radio" name="q3" value="short-term"> เน้นเฉพาะการลดต้นทุนระยะสั้น</label>
+          <label><input type="radio" name="q3" value="life-cycle"> คำนึงถึงวงจรชีวิตทั้งหมดของผลิตภัณฑ์และผลกระทบต่อสิ่งแวดล้อม</label>
+          <label><input type="radio" name="q3" value="profit-only"> เพิ่มกำไรโดยไม่สนใจสิ่งแวดล้อม</label>
+          <label><input type="radio" name="q3" value="design-only"> ออกแบบรูปลักษณ์ให้สวยงามเท่านั้น</label>
+        </div>
+        <button type="button" onclick="gradeQuiz('postQuiz', ['feasibility','limited-users','life-cycle'])">ส่งคำตอบ</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Modal for quiz results -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal" class="modal">
+      <h4>ผลการทดสอบ</h4>
+      <p></p>
+      <button onclick="hideModal()">ปิด</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบการพัฒนาผลิตภัณฑ์</p>
+  </footer>
+</body>
+</html>
