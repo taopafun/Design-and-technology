@@ -314,3 +314,12 @@ footer {
     margin-bottom: 0.5rem;
   }
 }
+
+/* ป้องกันรูปภาพล้นขอบ container */
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* จัดรูปให้อยู่ตรงกลาง */
+  border-radius: 8px; /* (ถ้าต้องการมุมโค้งเหมือนการ์ด) */
+}
