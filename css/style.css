@@ -37,34 +37,46 @@ header {
   color: white;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* แทน space-between เพื่อจัดกลาง */
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* ระยะห่างระหว่างหัวข้อและเมนู */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   font-size: 1.5rem;
   font-weight: 600;
+  margin-right: 2rem; /* ระยะห่างระหว่างชื่อและเมนู */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   background-color: #00b4d8;
+  transform: translateY(-2px);
 }
+
 
 /* Hero section */
 .hero {
