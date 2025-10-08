@@ -27,7 +27,7 @@
     <p>ทดสอบความรู้ของคุณเกี่ยวกับรถยนต์ไฟฟ้าด้วยแบบทดสอบก่อนเรียนและหลังเรียนต่อไปนี้ เลือกคำตอบที่ถูกต้องที่สุดสำหรับแต่ละคำถามแล้วคลิกปุ่มส่งคำตอบเพื่อดูคะแนนของคุณ</p>
 
     <!-- Pre‑test -->
-    <section class="quiz-section">
+    <section id="pre-test" class="quiz-section" style="display:none;">
       <h3>แบบทดสอบก่อนเรียน</h3>
       <form id="preQuiz">
         <div class="question">
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Post‑test -->
-    <section class="quiz-section">
+    <section id="post-test" class="quiz-section" style="display:none;">
       <h3>แบบทดสอบหลังเรียน</h3>
       <form id="postQuiz">
         <div class="question">
@@ -98,4 +98,15 @@
     <p>&copy; 2025 วิชาการออกแบบเทคโนโลยี – แบบทดสอบรถยนต์ไฟฟ้า</p>
   </footer>
 </body>
+<script>
+function showQuiz(type) {
+  // ซ่อนหน้าตัวเลือก
+  document.getElementById('quiz-selector').style.display = 'none';
+  // แสดงแบบทดสอบที่เลือก
+  document.getElementById(type).style.display = 'block';
+  // เลื่อนไปด้านบน
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 </html>
