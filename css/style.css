@@ -30,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 /* Navigation bar */
 header {
   background-color: #0077b6;
@@ -314,7 +313,6 @@ footer {
     margin-bottom: 0.5rem;
   }
 }
-
 /* ป้องกันรูปภาพล้นขอบ container */
 .container img {
   max-width: 100%;
@@ -322,4 +320,25 @@ footer {
   display: block;
   margin: 0 auto; /* จัดรูปให้อยู่ตรงกลาง */
   border-radius: 8px; /* (ถ้าต้องการมุมโค้งเหมือนการ์ด) */
+}
+.quiz-selector {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.quiz-selector button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quiz-selector button:hover {
+  background-color: #00b4d8;
+  transform: translateY(-3px);
 }
